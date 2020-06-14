@@ -3,7 +3,7 @@ node{
      git 'https://github.com/egumma/jenkins-example'
  }
  stage('Compile-Package'){
-     sh 'mvn package'
+     bat 'mvn package'
  }
  
 }
