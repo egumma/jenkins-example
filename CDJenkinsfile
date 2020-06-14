@@ -3,7 +3,8 @@ node{
      git 'https://github.com/egumma/jenkins-example'
  }
  stage('Compile-Package'){
-     bat 'mvn package'
+     def mvnHome = tool name: 'maven-01', type: 'maven'
+     bat "${mvnHome}/bin/mvn package"
  }
  
 }
